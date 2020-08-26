@@ -121,7 +121,7 @@ $virtualorPhysical= Receive-Job $virtualorPhysical.Id | Select-Object Manufactur
 ################################################################################
 
  
-$starttime
+write-host ""
 
 $Result += [PSCustomObject] @{
 
