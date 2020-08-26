@@ -12,7 +12,7 @@ get-content <Somelist.txt> or <anylist.csv> | TonyB_default.ps1
 .PARAMETER computername
 one or more computername, or IP address... peace to America!
 .LINK
-       https://github.com/officecigar/windows_scripts/blob/master/serverhealth5.ps1
+       https://github.com/officecigar/Server-health-checking/edit/master/WindowsServerhealthCheck.ps1
  #>
 #################################################################################
 # get all the servers in your domain
