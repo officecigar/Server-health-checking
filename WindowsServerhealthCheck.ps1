@@ -94,9 +94,7 @@ $windowsVersions =(gwmi -class Win32_OperatingSystem -ComputerName $ComputerName
 $virtualorPhysical = gwmi -Class Win32_ComputerSystem -ComputerName $ComputerName -AsJob
 Wait-Job $virtualorPhysical.Id   -Timeout 5 # times out after 5 seconds
 $virtualorPhysical= Receive-Job $virtualorPhysical.Id | Select-Object Manufacturer | ForEach-Object {$_.Manufacturer} 
-
- $virtual ="VMware, Inc."
- $virtual1 ="Manufacturer : VMware, Inc."
+$virtual ="VMware, Inc."
  
   if (Compare-Object "$virtualorPhysical" "$virtual" )
   {
@@ -435,7 +433,7 @@ $Result += [PSCustomObject] @{
 ## OS Version
               
 
-            if(($Entry.OSVersion) -eq  " Microsoft Windows Server 2008 Standard")
+            if(($Entry.OSVersion) -eq  "Microsoft Windows Server 2008 Standard")
           
 
           {
