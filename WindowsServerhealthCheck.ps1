@@ -14,6 +14,8 @@ one or more computername, or IP address... peace to America!
 .LINK
        https://github.com/officecigar/Server-health-checking/edit/master/WindowsServerhealthCheck.ps1
  #>
+ 
+ 
 #################################################################################
 # get all the servers in your domain
 #
