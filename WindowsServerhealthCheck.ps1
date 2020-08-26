@@ -21,7 +21,7 @@ one or more computername, or IP address... peace to America!
 ################################################################################
 $starttime = Get-Date
 $whatdomain = Get-ADDomain | Select-Object dnsroot | ForEach-Object {$_.dnsroot}
-
+$ServerCount=(Get-ADComputer -Filter 'operatingsystem -like "Windows *server*" -and enabled -eq "true"').count
 $adserverlist = Get-ADComputer -Filter 'operatingsystem -like "*server*" -and enabled -eq "true"' ` -Properties dnshostname | Sort-Object -Property Operatingsystem |Select-Object -Property dnshostname | ForEach-Object {$_.dnshostname   }
 $adserverlist | ft -AutoSize -HideTableHeaders | Out-File "C:\temp\$whatdomain.serverlist.txt"
 $ServerInputFile = "C:\temp\$whatdomain.serverlist.txt"
@@ -163,7 +163,7 @@ $Result += [PSCustomObject] @{
                      <body style=""background-color:powderblue"">
                      
                      <font color =""#99000"">
-                     <H2><B>Current Domain: $whatdomain </B></H2></font>
+                     <H2><B>Current Domain: $whatdomain & Total Server Count: $ServerCount</B></H2></font>
                      <H2><B>Daily Health Check Report</B></H2></font>
                      <Table border=2 cellpadding=4 cellspacing=3>
                      <TR bgcolor=D1D0CE align=center>
