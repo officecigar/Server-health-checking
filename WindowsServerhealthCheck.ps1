@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
 Think powershell think Mr-ITpro.com !!! FUN STUFF
 .EXAMPLE
@@ -14,7 +14,6 @@ one or more computername, or IP address... peace to America!
 .LINK
        https://github.com/officecigar/windows_scripts/blob/master/serverhealth5.ps1
  #>
-
 #################################################################################
 # get all the servers in your domain
 #
