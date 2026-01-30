@@ -9,7 +9,7 @@ Windows 2008 Servers do NOT report the last Patch date in this script.
 
 I give credit to Victor Rafael : https://gallery.technet.microsoft.com/scriptcenter/Server-Health-Check-CPU-b34a1379/view/Discussions#content. 
 I modified it a lot for my needs. 
-I. Remove(s) & keeps
+Remove(s) & keeps
  1. I removed the email parts of the script.... I was not emailing anyone.
  2. I removed serverlist. I need all the windows servers from AD.
  3. I removed a lot of stuff... never the less the script Victor R. did save me a lot time.
